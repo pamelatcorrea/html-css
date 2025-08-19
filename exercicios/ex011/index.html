@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispotivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <h1>Meu teste</h1>
+    <p>Vou tentar fazer por conta própria, será que dá certo?</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="bandeiras/bandeiras-p.png" type="image/png">
+        <source media="(max-width: 1250px)" srcset="bandeiras/bandeiras-m.png" type="image/png">
+        <img src="bandeiras/bandeiras-g.png" alt="Imagem flexível">
+
+        <h1>Reproduzindo áudios</h1>
+        <p>Vamos aprender a reproduzir áudios em HTML5</p> <!-- MP3 WAV OGG formatos áudio-->
+        <audio src="midia/monthaholic-schwartzy.mp3" controls autoplay></audio> <!--Essa não é a melhor forma--><br>
+         <!--Essa é a melhor forma-->
+         <audio preload="metadata" autoplay controls loop>  <!--Preload no AUTO considera que o site só vai terminar de carregar depois que o áudio carregar, o que é ruim pq o áudio pode ser muito grande. No METADATA carrega algumas informações. E no NONE não carrega nada, só quando a pessoa clicar.--> <!--LOOP é pra ir em loop, recomeçando a tocar-->
+            <source src="midia/guanacast-33.mp3" type="audio/mpeg"> 
+            <!--No material tem várias opções de TYPES. Pra mp3 vai ser MPEG-->
+           <source src="midia/guanacast-33.ogg" type="audio/ogg">
+           <source src="midia/guanacast-33.wav" type="audios=/wav"> 
+           <!--Colocar na ordem. Primeiro mp3, se o navegador não conseguir, vai tentar ogg. Não usar wav que é muito pesado-->
+           </audio>
+           <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/guanacast-33.mp3">Clique aqui para fazer o download do áudio.</a></p>
+         
+    </picture>
+</body>
+</html>
