@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+* { /*seletor universal, pra todo o site*/
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100%vh; /*100% da altura da viewport*/
+    background-color: darkgray; /*cor do fundo*/
+}
+
+header { /*header é o cabeçalho*/
+    background-color: black; /*cor de fundo*/
+    color: white; /*cor da fonte*/
+    text-align: center; /*alinhar o texto*/
+}
+
+header > h1 { /*o título Cordel Moderno, só vai mexer nele*/
+    padding-top: 50px; /*espaço de cima*/
+    font-variant: small-caps; /*pra ficar tudo em letra maiúscula, e também pode usar 'text-transform: uppercase;' mas fica mais gritante*/
+}
+
+header > p {
+    padding-bottom: 50px; /*pra alinhar com o padding top do h1*/
+}
+
+header a, footer a { /*pra configurar os links*/
+    color: white;
+    text-decoration: none; /*pra tirar o sublinhado*/
+    font-weight: bolder; /*pra deixar negrito*/
+
+}
+
+header a:hover, footer a:hover { /*o hover é exatamente pra estilizar quando passa o mouse em cima*/
+    text-decoration: underline; /*no caso, pro link ficar sublinhado quando passar por cima*/
+}
+
+section { /*como não temc classe, serve pra todas as sections*/
+    padding-top: 10vh; /*colocar o padding aqui pra que possa ser feito o efeito paralaxe*/
+    padding-bottom: 10vh;
+    line-height: 2em; /*dar espaço entre as linhas*/
+    padding-left: 30px;
+}
+
+section.normal { /*o . é pra dizer a classe*/
+    background-color: white;
+    color: black;
+}
+
+section.imagem { /*classe da section que vai a imagem*/
+    background-color: rgb(71, 70, 70);
+    color: white;
+}
+
+section.imagem > p { /*uso o >p porque é a section mas é a parte em que eu quero mexer*/
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+footer { /*pra estilizar o cabeçalho*/
+    background-color: black; /*cor do fundo*/
+    text-align: center; /*centralizar*/
+    color: white; /*cor da letra*/
+    padding: 10px; /*espaço entre a letra e o corpo*/
+}
