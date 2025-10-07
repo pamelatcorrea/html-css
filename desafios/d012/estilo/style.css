@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root { /*usamos o root, uma pseudo classe, pra ter uma variável que ajude a organizar, a usar a mesma configuração em vários comandos*/
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Passion One", sans-serif;
+    --fonte3: "Sriracha", cursive;
+}
+
 * { /*seletor universal, pra todo o site*/
     margin: 0px;
     padding: 0px;
@@ -8,6 +18,7 @@
 html, body {
     min-height: 100%vh; /*100% da altura da viewport*/
     background-color: darkgray; /*cor do fundo*/
+    font-family: var(--fonte1);
 }
 
 header { /*header é o cabeçalho*/
@@ -19,6 +30,8 @@ header { /*header é o cabeçalho*/
 header > h1 { /*o título Cordel Moderno, só vai mexer nele*/
     padding-top: 50px; /*espaço de cima*/
     font-variant: small-caps; /*pra ficar tudo em letra maiúscula, e também pode usar 'text-transform: uppercase;' mas fica mais gritante*/
+    font-family: var(--fonte2); /*fonte que foi importada*/
+    font-size: 4em;
 }
 
 header > p {
@@ -41,6 +54,8 @@ section { /*como não temc classe, serve pra todas as sections*/
     padding-bottom: 10vh;
     line-height: 2em; /*dar espaço entre as linhas*/
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
 }
 
 section.normal { /*o . é pra dizer a classe*/
@@ -54,7 +69,8 @@ section.imagem { /*classe da section que vai a imagem*/
 }
 
 section.imagem > p { /*uso o >p porque é a section mas é a parte em que eu quero mexer*/
-    width: 400px;
+    display: inline-block;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.26);
 }
 
