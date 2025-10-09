@@ -58,6 +58,10 @@ section { /*como não temc classe, serve pra todas as sections*/
     font-size: 3.5vw;
 }
 
+section > p {
+    padding-bottom: 2em;
+}
+
 section.normal { /*o . é pra dizer a classe*/
     background-color: white;
     color: black;
@@ -66,12 +70,26 @@ section.normal { /*o . é pra dizer a classe*/
 section.imagem { /*classe da section que vai a imagem*/
     background-color: rgb(71, 70, 70);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    background-attachment: fixed; /*pra fazer o efeito paralaxe, onde a foto fica fixa enquanto tu rola*/
 }
 
 section.imagem > p { /*uso o >p porque é a section mas é a parte em que eu quero mexer*/
     display: inline-block;
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.26);
+    text-shadow: 1px 1px 0px black; /*sombra no texto*/
+}
+
+section#img01 { /*criei o id img 01 no html pra editar cada imagem*/
+    background-image: url('../imagens/background001.jpg');
+    background-size: cover; /*cover é pra cobrir todo o espaço*/
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center; /*ajustar a posição da imagem*/
+    background-size: cover;
 }
 
 footer { /*pra estilizar o cabeçalho*/
