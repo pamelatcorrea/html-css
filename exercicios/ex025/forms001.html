@@ -12,10 +12,15 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form>
-        <p>Nome: <input type="text" name="nome" id="nome"></p>
-        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
-        <p><input type="submit" value="Enviar"></p>
+    <form action="cadastro.php"> <!--esse cadastro php é pra onde vai o formulário-->
+        <p><label for="inome">Nome:</label>
+            <!--esse LABEL é pra dizer que essa palavra é do input NOME-->
+            <input type="text" name="nome" id="inome"></p>
+            <!--name e id são pra identificar. name mais usado em html e php e id em js-->
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p>
+            <input type="submit" value="Enviar"></p>
     </form>
 </body>
 </html>
