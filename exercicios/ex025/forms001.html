@@ -12,11 +12,9 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form action="cadastro.php"> <!--esse cadastro php é pra onde vai o formulário-->
+    <form action="cadastro.php" method="post">
         <p><label for="inome">Nome:</label>
-            <!--esse LABEL é pra dizer que essa palavra é do input NOME-->
             <input type="text" name="nome" id="inome"></p>
-            <!--name e id são pra identificar. name mais usado em html e php e id em js-->
         <p><label for="isobrenome">Sobrenome:</label> 
             <input type="text" name="sobrenome" id="isobrenome"></p>
         <p>
